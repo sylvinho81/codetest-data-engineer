@@ -91,8 +91,11 @@ provide us the flexibility to autoscale per service by using HPA or similar. So 
 Next steps:
 -----------
 Dependencies: Regard to the project structure I would use poetry to manage the different dependencies instead of installing it directly in the Dockerfile 
+
 Tests: I didn't expend time implementing tests, I just focused on the analytics part. But it would be necessary to implement unit and integration tests.
+
 Refactor: I would refactor the code because I saw some things, just not the code that it was shared with me, also some code I have implemented. For example:
+    
     - Not using pydantic models for the response of the classification API (response_model)
     - If the API needs to be exposed outside of the cluster in the organization then setup some kind of authentication mechanism
     - Hardcoded configuration across the code instead of defining it in some config class that takes the configuration from env variables.
